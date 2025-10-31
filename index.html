@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Percy Yarleque | WDD 231 Course Home Page">
+  <title>Percy Yarleque | WDD 231 Course Home Page</title>
+  
+  <link rel="stylesheet" href="styles/desktop.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo-area">
+        <img src="images/logo.png" alt="Site Logo" class="logo">
+        <h1>Percy Yarleque</h1>
+      </div>
+
+      <button id="menu-button" aria-label="Menu">☰</button>
+
+      <nav id="nav-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Chamber Project</a>
+        <a href="#">Final Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="about">
+        <h2>About Me</h2>
+        <p>
+        Hi! I'm Percy Yarleque, a 23-year-old web development student from Lima, Peru. I'm passionate about creating websites that are not only functional but also visually appealing and easy to use. I enjoy learning new technologies and finding creative ways to apply them to real-world projects.
+        Outside of programming, I love playing soccer with friends and spending time outdoors. My favorite food is definitely ceviche; nothing beats a good plate of fresh Peruvian ceviche! I'm always looking for opportunities to further develop my skills and to create projects that have a positive impact on my community.        </p>
+      </div>
+      <div class="photo">
+        <h2>Student Photo</h2>
+        <img src="images/profile.jpg" alt="Photo of Percy Yarleque">
+      </div>
+    </section>
+
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="filter-buttons">
+        <button id="all">All</button>
+        <button id="cse">CSE</button>
+        <button id="wdd">WDD</button>
+      </div>
+      <div id="course-container" class="course-container"></div>
+      <p id="total-credits">The total credits for courses listed above is 0.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/percyyarleque/" target="_blank"><img src="images/linkedin.webp" alt="LinkedIn"></a>
+      <a href="https://github.com/Percy2907" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      <a href="https://x.com/Brandot2907" target="_blank"><img src="images/X.png" alt="X"></a>
+    </div>
+    <p>
+      © <span id="year"></span> | Percy Yarleque | Lima, Peru
+    </p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

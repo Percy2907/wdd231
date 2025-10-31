@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fa;
+  color: #222;
+}
+
+header {
+  background-color: #004e7c;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#menu-button {
+  display: none;
+}
+
+#nav-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+#nav-menu a.active,
+#nav-menu a:hover {
+  background-color: #ffd166;
+  color: #222;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about {
+  flex: 1.4;
+  min-width: 300px;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.about p {
+  text-align: left;
+}
+
+.photo {
+  flex: 0.8;
+  min-width: 250px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.photo img {
+  width: 50%;
+  border-radius: 8px;
+  height: auto;
+  border: 0.5px solid black;
+}
+
+/* COURSES */
+.courses {
+  text-align: center;
+  padding: 2rem;
+  background: #ffffff;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-buttons button {
+  background-color: #ffd166;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-buttons button:hover {
+  background-color: #ffb703;
+}
+
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 900px) {
+  .course-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.course {
+  background: #e3f2fd;
+  padding: 0.8rem;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.course.completed {
+  background: #b9f6ca;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004e7c;
+  color: white;
+}
+
+footer .social img {
+  width: 40px;
+  margin: 0 0.5rem;
+}
