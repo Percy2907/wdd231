@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Lima Chamber of Commerce directory and discover local businesses that power our city.">
+  <meta name="author" content="Percy Yarleque">
+  <title>Lima Chamber of Commerce | Directory</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <meta property="og:title" content="Lima Chamber of Commerce Directory">
+  <meta property="og:description" content="Connect with local businesses and entrepreneurs through the Lima Chamber of Commerce directory.">
+  <meta property="og:image" content="https://percy2907.github.io/wdd231/images/logo.png">
+  <meta property="og:url" content="https://percy2907.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/directory.css">
+</head>
+
+<body>
+  <header>
+    <h1>Lima Chamber of Commerce</h1>
+    <button id="menu-toggle" aria-label="Menu">&#9776;</button>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="directory.html" class="active">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+
+    <div class="view-toggle">
+      <button id="grid-view" class="active">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+
+    <section id="members" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lima Chamber of Commerce</p>
+    <p>Percy Yarleque | WDD 231 | <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/directory.js"></script>
+</body>
+</html>
