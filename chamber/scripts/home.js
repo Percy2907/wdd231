@@ -3,8 +3,7 @@ const menuBtn = document.querySelector("#menu-toggle");
 const navMenu = document.querySelector("#nav-menu");
 
 menuBtn.addEventListener("click", () => {
-  navMenu.style.display =
-    navMenu.style.display === "flex" ? "none" : "flex";
+  navMenu.classList.toggle("show");
 });
 
 // FOOTER YEAR & LAST MODIFIED
