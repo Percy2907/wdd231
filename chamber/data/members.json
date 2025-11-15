@@ -4,6 +4,7 @@
     "address": "Av. Larco 345, Miraflores, Lima",
     "phone": "+51 987 654 321",
     "website": "https://miraflorescoffee.com",
+    "email": "contact@miraflorescoffee.com",
     "image": "member1.png",
     "membership": 3
   },
@@ -12,14 +13,16 @@
     "address": "Calle Los Olivos 123, San Isidro, Lima",
     "phone": "+51 912 345 678",
     "website": "https://www.techandes.com/",
+    "email": "info@techandes.com",
     "image": "member2.webp",
     "membership": 2
   },
   {
-    "name": "GreenMarket Perú",
+    "name": "GreenMarket Peru",
     "address": "Av. Brasil 456, Magdalena del Mar, Lima",
     "phone": "+51 933 888 555",
     "website": "https://greenmarket.pe",
+    "email": "sales@greenmarket.pe",
     "image": "member3.png",
     "membership": 1
   },
@@ -28,6 +31,7 @@
     "address": "Malecón Cisneros 789, Miraflores, Lima",
     "phone": "+51 944 112 233",
     "website": "https://hotel-peru-pacifico.lima-hotels-pe.com/es/",
+    "email": "booking@pacificohotel.com",
     "image": "member4.png",
     "membership": 3
   },
@@ -36,6 +40,7 @@
     "address": "Av. Arequipa 5020, Miraflores, Lima",
     "phone": "+51 999 001 002",
     "website": "https://www.facebook.com/LimaTechDigital",
+    "email": "contact@limatechacademy.com",
     "image": "member5.png",
     "membership": 2
   },
@@ -44,14 +49,16 @@
     "address": "Jr. Cusco 102, Cercado de Lima",
     "phone": "+51 911 223 344",
     "website": "https://www.andinotravel.com/",
+    "email": "info@andinotravel.com",
     "image": "member6.png",
     "membership": 1
   },
   {
-    "name": "Perú Artesanal",
+    "name": "Peru Artesanal",
     "address": "Av. Petit Thouars 5290, Miraflores, Lima",
     "phone": "+51 955 667 788",
     "website": "https://www.facebook.com/peruartesanalshop",
+    "email": "sales@peruartesanal.com",
     "image": "member7.png",
     "membership": 3
   }
