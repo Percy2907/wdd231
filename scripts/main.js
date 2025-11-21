@@ -2,10 +2,9 @@ const menuButton = document.querySelector("#menu-button");
 const navMenu = document.querySelector("#nav-menu");
 
 if (menuButton && navMenu) {
-
   menuButton.setAttribute("aria-expanded", "false");
 
-  menuButton.addEventListener("click", (e) => {
+  menuButton.addEventListener("click", () => {
     navMenu.classList.toggle("open");
     const isOpen = navMenu.classList.contains("open");
     menuButton.textContent = isOpen ? "X" : "☰";
@@ -14,7 +13,6 @@ if (menuButton && navMenu) {
 
   document.addEventListener("click", (e) => {
     if (!navMenu.classList.contains("open")) return;
-
     if (!navMenu.contains(e.target) && e.target !== menuButton) {
       navMenu.classList.remove("open");
       menuButton.textContent = "☰";
@@ -23,6 +21,11 @@ if (menuButton && navMenu) {
   });
 }
 
+
+
+// --------------------
+// Course Data
+// --------------------
 const courses = [
   {
     subject: 'CSE',
@@ -30,7 +33,7 @@ const courses = [
     title: 'Introduction to Programming',
     credits: 2,
     certificate: 'Web and Computer Programming',
-    description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+    description: 'This course will introduce students to programming...',
     technology: ['Python'],
     completed: true
   },
@@ -40,7 +43,7 @@ const courses = [
     title: 'Web Fundamentals',
     credits: 2,
     certificate: 'Web and Computer Programming',
-    description: 'This course introduces students to the World Wide Web and to careers in web site design and development.',
+    description: 'Introduction to the World Wide Web and careers...',
     technology: ['HTML', 'CSS'],
     completed: true
   },
@@ -50,7 +53,7 @@ const courses = [
     title: 'Programming with Functions',
     credits: 2,
     certificate: 'Web and Computer Programming',
-    description: 'Students become more efficient programmers by learning to write, call, debug, and test functions.',
+    description: 'Learn to write, call, debug, and test functions.',
     technology: ['Python'],
     completed: true
   },
@@ -60,7 +63,7 @@ const courses = [
     title: 'Programming with Classes',
     credits: 2,
     certificate: 'Web and Computer Programming',
-    description: 'This course introduces the concept of classes, objects, inheritance, and polymorphism.',
+    description: 'Classes, objects, inheritance, and polymorphism.',
     technology: ['C#'],
     completed: true
   },
@@ -70,7 +73,7 @@ const courses = [
     title: 'Dynamic Web Fundamentals',
     credits: 2,
     certificate: 'Web and Computer Programming',
-    description: 'Students learn to create dynamic websites using JavaScript for responsive user experiences.',
+    description: 'Dynamic websites using JavaScript.',
     technology: ['HTML', 'CSS', 'JavaScript'],
     completed: true
   },
@@ -80,29 +83,59 @@ const courses = [
     title: 'Frontend Web Development I',
     credits: 2,
     certificate: 'Web and Computer Programming',
-    description: 'Students focus on UX, accessibility, and API usage.',
+    description: 'UX, accessibility, and API usage.',
     technology: ['HTML', 'CSS', 'JavaScript'],
     completed: false
   }
 ];
 
+
+
+// --------------------
+// Modal Elements
+// --------------------
+const modalOverlay = document.getElementById("modal-overlay");
+const closeModalBtn = document.getElementById("closeModal");
+
+closeModalBtn.addEventListener("click", () => {
+  modalOverlay.style.display = "none";
+});
+
+modalOverlay.addEventListener("click", (e) => {
+  const box = document.getElementById("modalContent");
+  if (!box.contains(e.target)) {
+    modalOverlay.style.display = "none";
+  }
+});
+
+
+
+// --------------------
+// Display Courses
+// --------------------
 const container = document.querySelector("#course-container");
 const totalCreditsEl = document.querySelector("#total-credits");
 
 function displayCourses(filter = "All") {
   container.innerHTML = "";
-  let filtered = courses.filter(course => filter === "All" || course.subject === filter);
+
+  let filtered = courses.filter(
+    course => filter === "All" || course.subject === filter
+  );
 
   filtered.forEach(course => {
     const div = document.createElement("div");
     div.classList.add("course");
-    if (course.completed) div.classList.add("completed");
+    div.style.cursor = "pointer";  
+
+    div.classList.add(course.completed ? "completed" : "not-completed");
 
     div.innerHTML = `
-      <strong>${course.subject} ${course.number}:</strong> ${course.title}<br>
-      <em>${course.credits} credits</em><br>
-      <small>${course.technology.join(", ")}</small>
+      <strong>${course.subject} ${course.number} – ${course.title}</strong>
     `;
+
+    div.addEventListener("click", () => showModal(course));
+
     container.appendChild(div);
   });
 
@@ -110,11 +143,38 @@ function displayCourses(filter = "All") {
   totalCreditsEl.textContent = `The total credits for courses listed above is ${totalCredits}.`;
 }
 
+
+
+// --------------------
+// Show Modal
+// --------------------
+function showModal(course) {
+  document.getElementById("modal-title").textContent =
+    `${course.subject} ${course.number} – ${course.title}`;
+
+  document.getElementById("modal-credits").textContent = course.credits;
+  document.getElementById("modal-certificate").textContent = course.certificate;
+  document.getElementById("modal-description").textContent = course.description;
+  document.getElementById("modal-tech").textContent = course.technology.join(", ");
+
+  modalOverlay.style.display = "flex"; 
+}
+
+
+
+// --------------------
+// Filter Buttons
+// --------------------
 document.querySelector("#all").addEventListener("click", () => displayCourses("All"));
 document.querySelector("#cse").addEventListener("click", () => displayCourses("CSE"));
 document.querySelector("#wdd").addEventListener("click", () => displayCourses("WDD"));
 
 displayCourses();
 
+
+
+// --------------------
+// Footer
+// --------------------
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;

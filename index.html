@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Percy Yarleque | WDD 231 Course Home Page for BYU-Idaho Web Development">
   <meta name="author" content="Percy Yarleque">
-  
+
   <meta property="og:title" content="WDD 231 - Percy Yarleque">
   <meta property="og:description" content="Explore my WDD 231 web development projects and assignments.">
-  <meta property="og:image" content="https://percy2907.github.io/wdd231/images/logo.png">
+  <meta property="og:image" content="images/logo.png">
   <meta property="og:url" content="https://percy2907.github.io/wdd231/">
 
   <title>Percy Yarleque | WDD 231 Course Home Page</title>
-  
+
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/desktop.css">
-  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
   <header>
     <div class="header-left">
       <div class="logo-area">
@@ -40,13 +40,16 @@
   </header>
 
   <main>
+
     <section class="about-section">
       <div class="about">
         <h2>About Me</h2>
         <p>
-        Hi! I'm Percy Yarleque, a 23-year-old web development student from Lima, Peru. I'm passionate about creating websites that are not only functional but also visually appealing and easy to use. I enjoy learning new technologies and finding creative ways to apply them to real-world projects.
-        Outside of programming, I love playing soccer with friends and spending time outdoors. My favorite food is definitely ceviche; nothing beats a good plate of fresh Peruvian ceviche! I'm always looking for opportunities to further develop my skills and to create projects that have a positive impact on my community.        </p>
+          Hi! I'm Percy Yarleque, a 23-year-old web development student from Lima, Peru. I'm passionate about creating websites that are not only functional but also visually appealing and easy to use. I enjoy learning new technologies and finding creative ways to apply them to real-world projects.<br><br>
+          Outside of programming, I love playing soccer with friends and spending time outdoors. My favorite food is definitely ceviche! I'm always looking for opportunities to further develop my skills and create projects that make a positive impact.
+        </p>
       </div>
+
       <div class="photo">
         <h2>Student Photo</h2>
         <img src="images/profile.jpg" alt="Photo of student - Percy Yarleque">
@@ -55,12 +58,15 @@
 
     <section class="courses">
       <h2>Web Certificate Courses</h2>
+
       <div class="filter-buttons">
         <button id="all">All</button>
         <button id="cse">CSE</button>
         <button id="wdd">WDD</button>
       </div>
+
       <div id="course-container" class="course-container"></div>
+
       <p id="total-credits">The total credits for courses listed above is 0.</p>
     </section>
 
@@ -68,6 +74,7 @@
       <h2>Contact</h2>
       <p>Email: percy.brandot@gmail.com</p>
     </section>
+
   </main>
 
   <footer>
@@ -76,12 +83,24 @@
       <a href="https://github.com/Percy2907" target="_blank"><img src="images/github.png" alt="GitHub Logo"></a>
       <a href="https://x.com/Brandot2907" target="_blank"><img src="images/twitter.png" alt="twitter Logo"></a>
     </div>
-    <p>
-      © <span id="year"></span> | Percy Yarleque | Lima, Peru
-    </p>
+
+    <p>© <span id="year"></span> | Percy Yarleque | Lima, Peru</p>
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
   <script src="scripts/main.js" defer></script>
+  
+  <div id="modal-overlay">
+    <div id="modal">
+      <button id="closeModal" class="close-btn">❌</button>
+
+      <h2 id="modal-title"></h2>
+      <p><strong>Credits:</strong> <span id="modal-credits"></span></p>
+      <p><strong>Certificate:</strong> <span id="modal-certificate"></span></p>
+      <p><strong>Description:</strong> <span id="modal-description"></span></p>
+      <p><strong>Technologies:</strong> <span id="modal-tech"></span></p>
+    </div>
+  </div>
+
 </body>
 </html>
