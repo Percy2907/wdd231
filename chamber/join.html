@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Lima Chamber of Commerce and access member benefits.">
+  <meta name="author" content="Percy Yarleque">
+  <title>Lima Chamber of Commerce | Join</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+  <header>
+    <h1>Lima Chamber of Commerce</h1>
+    <button id="menu-toggle" aria-label="Menu">&#9776;</button>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Join the Chamber</h2>
+
+    <section class="form-section">
+      <h2>Membership Application Form</h2>
+      <form id="join-form" method="get" action="thankyou.html">
+        <label>
+          First Name:
+          <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+        </label>
+
+        <label>
+          Last Name:
+          <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+        </label>
+
+        <label>
+          Organizational Title:
+          <input type="text" name="title" title="Enter your organizational title (min 7 letters, spaces, or hyphens)"
+            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+        </label>
+
+        <label>
+          Email:
+          <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+        </label>
+
+        <label>
+          Business / Organization Name:
+          <input type="text" name="business" title="Enter your business or organization name" autocomplete="organization" required>
+        </label>
+
+        <label>
+          Membership Level:
+          <select name="membership" title="Select a membership level" required>
+                <option value="" disabled selected>Select membership level</option>
+                <option value="np">Non-Profit</option>
+                <option value="bronze">Bronze</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+          </select>
+        </label>
+
+        <label>
+          Business Description:
+          <textarea name="description" title="Describe your business"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" value="Submit Application">
+      </form>
+
+      <!-- Membership Cards -->
+      <section class="membership-cards">
+        <div class="card" data-modal="np-modal">
+          <h3>Non-Profit</h3>
+          <a href="#" class="info-link">Benefits</a>
+        </div>
+        <div class="card" data-modal="bronze-modal">
+          <h3>Bronze</h3>
+          <a href="#" class="info-link">Benefits</a>
+        </div>
+        <div class="card" data-modal="silver-modal">
+          <h3>Silver</h3>
+          <a href="#" class="info-link">Benefits</a>
+        </div>
+        <div class="card" data-modal="gold-modal">
+          <h3>Gold</h3>
+          <a href="#" class="info-link">Benefits</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal" id="np-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Non-Profit Benefits</h3>
+      <ul>
+        <li>No fee</li>
+        <li>Directory listing</li>
+        <li>Access to newsletters</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="bronze-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Bronze Membership Benefits</h3>
+      <ul>
+        <li>Directory listing</li>
+        <li>Newsletter</li>
+        <li>Event invitations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="silver-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Silver Membership Benefits</h3>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Spotlight on homepage</li>
+        <li>Event discounts</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="gold-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Gold Membership Benefits</h3>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Sponsorship opportunities</li>
+        <li>Advertising support</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lima Chamber of Commerce</p>
+    <p>Percy Yarleque | WDD 231 | <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/join.js" defer></script>
+</body>
+</html>
