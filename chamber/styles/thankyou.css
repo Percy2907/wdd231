@@ -1,16 +1,26 @@
+:root {
+  --primary: #004aad;
+  --bg: #f9f9f9;
+  --text: #333;
+  --radius: 10px;
+}
+
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
   font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: #f9f9f9;
-  color: #333;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #004aad;
+  background: var(--primary);
   color: white;
   padding: 1rem;
   text-align: center;
@@ -21,20 +31,17 @@ nav a {
   text-decoration: none;
   margin: 0 0.5rem;
 }
-
-nav a.active {
-  text-decoration: underline;
-}
+nav a.active { text-decoration: underline; }
 
 main {
-  flex: 1; 
+  flex: 1;
   max-width: 1000px;
-  width: 90%;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 0 1rem;
   background: white;
-  border-radius: 10px;
+  border-radius: var(--radius);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
 }
 
 ul#submitted-info {
@@ -43,15 +50,13 @@ ul#submitted-info {
 }
 
 ul#submitted-info li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-  background-color: #004aad;
+  background-color: var(--primary);
   color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: auto; 
 }

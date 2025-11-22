@@ -11,44 +11,46 @@
 <link rel="stylesheet" href="styles/thankyou.css">
 </head>
 <body>
-<header>
-  <h1>Lima Chamber of Commerce</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="directory.html">Directory</a>
-    <a href="join.html" class="active">Join</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<div class="page-wrapper">
+  <header>
+    <h1>Lima Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main>
-  <h2>Thank You for Joining!</h2>
-  <p>Here is the information you submitted:</p>
-  <ul id="submitted-info">
-    <li>First Name: <span id="firstName"></span></li>
-    <li>Last Name: <span id="lastName"></span></li>
-    <li>Email: <span id="email"></span></li>
-    <li>Phone: <span id="phone"></span></li>
-    <li>Business: <span id="business"></span></li>
-    <li>Submitted On: <span id="timestamp"></span></li>
-  </ul>
-</main>
+  <main>
+    <h2>Thank You for Joining!</h2>
+    <p>Here is the information you submitted:</p>
+    <ul id="submitted-info">
+      <li>First Name: <span id="firstName"></span></li>
+      <li>Last Name: <span id="lastName"></span></li>
+      <li>Email: <span id="email"></span></li>
+      <li>Phone: <span id="phone"></span></li>
+      <li>Business: <span id="business"></span></li>
+      <li>Submitted On: <span id="timestamp"></span></li>
+    </ul>
+  </main>
 
-<footer>
-  <p>&copy; <span id="year"></span> Lima Chamber of Commerce</p>
-</footer>
+  <footer>
+    <p>&copy; <span id="year"></span> Lima Chamber of Commerce</p>
+  </footer>
+</div>
 
 <script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("firstName").textContent = params.get("firstName") || "N/A";
+  document.getElementById("lastName").textContent = params.get("lastName") || "N/A";
+  document.getElementById("email").textContent = params.get("email") || "N/A";
+  document.getElementById("phone").textContent = params.get("phone") || "N/A";
+  document.getElementById("business").textContent = params.get("business") || "N/A";
 
-const params = new URLSearchParams(window.location.search);
-document.getElementById("firstName").textContent = params.get("firstName");
-document.getElementById("lastName").textContent = params.get("lastName");
-document.getElementById("email").textContent = params.get("email");
-document.getElementById("phone").textContent = params.get("phone");
-document.getElementById("business").textContent = params.get("business");
-document.getElementById("timestamp").textContent = params.get("timestamp");
-
-document.getElementById("year").textContent = new Date().getFullYear();
+  const now = new Date();
+  document.getElementById("timestamp").textContent = now.toLocaleString();
+  document.getElementById("year").textContent = now.getFullYear();
 </script>
 </body>
 </html>
