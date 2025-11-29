@@ -219,6 +219,7 @@
 .cta-section h2 {
   font-size: 2rem;
   margin: 0 0 1rem 0;
+  color: white;
 }
 
 .cta-section p {
@@ -227,6 +228,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: white; 
 }
 
 .cta-button {
