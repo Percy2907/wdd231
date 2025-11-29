@@ -492,9 +492,10 @@ footer img {
   .header-content {
     flex: 1;
   }
-
-  header h2 { /* Changed from h1 to h2 */
+  
+  header h2 { 
     font-size: 1.2rem;
+    color: white; 
   }
 
   header img.logo {
