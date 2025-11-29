@@ -492,10 +492,10 @@ footer img {
   .header-content {
     flex: 1;
   }
-  
+
   header h2 { 
     font-size: 1.2rem;
-    color: white; 
+    color: var(--primary); 
   }
 
   header img.logo {
@@ -528,7 +528,6 @@ footer img {
 
   nav a {
     color: var(--text);
-    /* CORRECCIÓN: Background explícito para accesibilidad móvil */
     background-color: white; 
     padding: 1rem;
     text-align: center;
