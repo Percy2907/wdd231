@@ -56,7 +56,7 @@ a:hover {
     color: #a00320; 
 }
 
-/* ===== HEADER & NAVIGATION ===== */
+/* ===== HEADER & NAVIGATION (MOBILE LOGIC) ===== */
 header {
     background-color: var(--dark-blue);
     color: var(--white);
@@ -99,25 +99,8 @@ nav {
     opacity: 0.8;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
-    border-radius: 4px;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    background-color: var(--red);
-}
-
 .hamburger {
-    display: none;
+    display: flex; 
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -126,6 +109,7 @@ nav {
     border: none;
     cursor: pointer;
     padding: 0;
+    z-index: 10;
 }
 
 .hamburger span {
@@ -149,43 +133,45 @@ nav {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        background-color: var(--dark-blue);
-        width: 70%;
-        max-width: 300px;
-        height: 100vh;
-        padding: 5rem 2rem 2rem;
-        transition: left 0.3s ease;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-        gap: 0;
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1rem;
-        border-radius: 4px;
-    }
+/* Mobile Navigation Links */
+.nav-links {
+    list-style: none;
+    position: fixed; 
+    left: -100%; 
+    top: 0;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    padding: 5rem 2rem 2rem;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    gap: 0;
+    z-index: 5;
 }
 
-/* ===== MAIN CONTENT ===== */
+.nav-links.active {
+    left: 0;
+}
+
+.nav-links li {
+    margin: 0.5rem 0;
+}
+
+.nav-links a {
+    display: block;
+    padding: 1rem;
+    border-radius: 4px;
+    color: var(--white);
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--red);
+}
+
+/* ===== MAIN CONTENT===== */
 main {
     flex-grow: 1;
     min-height: calc(100vh - 200px);
@@ -647,7 +633,7 @@ main {
 }
 
 
-/* ===== SUBMIT PAGE ===== */
+/* ===== SUBMIT PAGE (Mobile First) ===== */
 .submit-section {
     padding: 3rem 5%;
     max-width: 800px;
@@ -661,7 +647,7 @@ main {
 
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
 }
 
@@ -702,7 +688,8 @@ main {
 .form-actions {
     grid-column: 1 / -1;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: stretch;
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -842,7 +829,7 @@ footer a:hover {
     opacity: 0.7;
 }
 
-/* Media Query for Forms (Mobile) */
+/* Media Query for Forms (Mobile-Specific) */
 @media (max-width: 600px) {
     .form-grid {
         grid-template-columns: 1fr;

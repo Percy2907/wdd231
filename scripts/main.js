@@ -18,6 +18,7 @@ if (menuButton && navMenu) {
       menuButton.textContent = "☰";
       menuButton.setAttribute("aria-expanded", "false");
     }
+    
   });
 }
 
