@@ -1,68 +1,75 @@
 @media screen and (min-width: 769px) {
-    /* ===== HEADER & NAVIGATION ===== */
+  /* ===== HEADER & NAVIGATION ===== */
 
-    .hamburger {
-        display: none;
-    }
+  .hamburger {
+    display: none;
+  }
 
-    .nav-links {
-        list-style: none;
-        position: static; 
-        left: auto;
-        top: auto;
-        flex-direction: row;
-        width: auto;
-        height: auto;
-        padding: 0;
-        background: transparent;
-        box-shadow: none;
-        gap: 1.5rem;
-        transition: none;
-        transform: none;
-        z-index: 5;
-        display: flex; 
-    }
-    
-    .nav-links li {
-        margin: 0;
-    }
+  .nav-links {
+    list-style: none;
+    position: static;
+    left: auto;
+    top: auto;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    gap: 1.5rem;
+    transition: none;
+    transform: none;
+    z-index: 5;
+    display: flex;
+  }
 
-    .nav-links a {
-        padding: 0.5rem 1rem; 
-    }
+  .nav-links li {
+    margin: 0;
+  }
 
-    /* ===== TYPOGRAPHY & LAYOUT ADJUSTMENTS ===== */
-    
-    .nav-brand h1 {
-        font-size: 2.2rem; 
-    }
+  .nav-links a {
+    padding: 0.5rem 1rem;
+  }
 
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.75rem; }
-    
-    .hero-content h2, .hero-recipes-content h2 {
-        font-size: 3.5rem;
-    }
+  /* ===== TYPOGRAPHY & LAYOUT ADJUSTMENTS ===== */
 
-    .filters-container {
-        justify-content: flex-start;
-        gap: 2rem;
-    }
+  .nav-brand h1 {
+    font-size: 2.2rem;
+  }
 
-    .form-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem; 
-    }
-    
-    .form-actions {
-        flex-direction: row; 
-        align-items: center;
-        justify-content: flex-end;
-        gap: 1.5rem; 
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
 
-    .content-grid {
-        gap: 3rem;
-    }
+  .hero-content h2,
+  .hero-recipes-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .filters-container {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  .content-grid {
+    gap: 3rem;
+  }
 }
