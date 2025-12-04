@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and filter our full collection of authentic Peruvian recipes by region, type, and more.">
+    <meta name="author" content="Percy Yarleque">
+    <title>All Recipes | Peruvian Cuisine</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <img src="images/logo.png" alt="Peruvian Cuisine Logo" class="logo">
+                <div> <h1>PERUVIAN CUISINE</h1>
+                    <p class="tagline">Authentic Flavors</p>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="recipes.html" class="active">RECIPES</a></li>
+                <li><a href="submit.html">SUBMIT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipes-hero">
+            <div class="hero-content">
+                <h2>Our Recipe Collection</h2>
+                <p>Find the perfect dish for any occasion</p>
+            </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="search">Search Recipes</label>
+                    <input type="text" id="search" placeholder="ceviche, chicken, rice">
+                </div>
+                <div class="filter-group">
+                    <label for="region">Filter by Region</label>
+                    <select id="region">
+                        <option value="all">All Regions</option>
+                        <option value="Coastal">Coastal</option>
+                        <option value="Andean">Andean</option>
+                        <option value="Amazonian">Amazonian</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="cuisineType">Filter by Type</label>
+                    <select id="cuisineType">
+                        <option value="all">All Types</option>
+                        <option value="Main Dish">Main Dish</option>
+                        <option value="Appetizer">Appetizer</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Drink">Drink</option>
+                    </select>
+                </div>
+            </div>
+            <div class="favorites-toggle">
+                <button id="favoritesToggle" class="filter-button" aria-pressed="false">
+                    Show My Favorites
+                </button>
+            </div>
+        </section> 
+        
+        <section class="recipes-grid-section">
+            <p class="recipe-count" id="recipeCount">Loading recipes...</p>
+            <div class="recipes-grid" id="recipesGrid">
+                </div>
+        </section>
+
+        <div id="recipeModal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-body">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ⭐ Percy Yarleque ⭐ WDD131</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#" id="videoLink">Video Demonstration</a></p>
+        <p class="footer-note">Last Updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script src="scripts/recipes.js" type="module"></script>
+</body>
+</html>

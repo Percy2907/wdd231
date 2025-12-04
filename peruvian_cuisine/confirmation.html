@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recipe submission confirmation">
+    <meta name="author" content="Percy Yarleque">
+    <title>Submission Received | Peruvian Cuisine</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <img src="images/logo.png" alt="Peruvian Cuisine Logo" class="logo">
+                <div> <h1>PERUVIAN CUISINE</h1>
+                    <p class="tagline">Authentic Flavors</p>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="submit.html">SUBMIT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation-section">
+            <div class="confirmation-card">
+                <div class="success-icon">✓</div>
+                <h2>Thank you for your submission!</h2>
+                <p>Your recipe has been successfully received. We will review it soon.</p>
+                <div class="submission-details" id="submissionDetails">
+                    </div>
+                <a href="recipes.html" class="cta-button">BROWSE MORE RECIPES →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 ⭐ Percy Yarleque ⭐ WDD131</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#" id="videoLink">Video Demonstration</a></p>
+        <p class="footer-note">Last Updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script src="scripts/confirmation.js" type="module"></script>
+</body>
+</html>

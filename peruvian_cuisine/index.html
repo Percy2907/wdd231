@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover authentic Peruvian cuisine with traditional recipes, cultural insights, and cooking techniques from the coastal, Andean, and Amazonian regions of Peru.">
+    <meta name="author" content="Percy Yarleque">
+    <meta property="og:title" content="Peruvian Cuisine - Authentic Flavors">
+    <meta property="og:description" content="Explore traditional Peruvian recipes and culinary heritage">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://percy2907.github.io/wdd231/peruvian-cuisine/">
+    
+    <title>Peruvian Cuisine | Authentic Flavors</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <img src="images/logo.png" alt="Peruvian Cuisine Logo" class="logo">
+                <div> <h1>PERUVIAN CUISINE</h1>
+                    <p class="tagline">Authentic Flavors</p>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="submit.html">SUBMIT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Experience the Rich Flavors of Peru</h2>
+                <p>From the Pacific coast to the Andes mountains and the Amazon rainforest</p>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <article class="info-card">
+                <h3>ABOUT PERUVIAN CUISINE</h3>
+                <p>Peruvian cuisine is a reflection of Peru's diverse geography and rich cultural heritage. It blends indigenous ingredients with Spanish, African, Chinese, and Japanese influences, creating one of the world's most unique and celebrated culinary traditions.</p>
+                <p>The three main regions: coastal, Andean, and Amazonian. Each contribute distinct flavors, ingredients, and cooking techniques that have been perfected over centuries.</p>
+            </article>
+            <article class="info-card">
+                <h3>START EXPLORING</h3>
+                <p>Discover traditional recipes passed down through generations, learn about native ingredients like ají peppers and purple corn, and master authentic cooking techniques.</p>
+                <p>Whether you're craving fresh ceviche, hearty lomo saltado, or sweet suspiro limeño, our collection brings Peru's vibrant food culture to your kitchen.</p>
+                <a href="recipes.html" class="cta-button">VIEW ALL RECIPES →</a>
+            </article>
+        </section>
+
+        <section class="featured-section">
+            <h2>FEATURED RECIPES</h2>
+            <div class="featured-grid" id="featuredRecipes">
+                </div>
+        </section>
+
+        <div id="recipeModal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-body">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ⭐ Percy Yarleque ⭐ WDD131</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#" id="videoLink">Video Demonstration</a></p>
+        <p class="footer-note">Last Updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html>
