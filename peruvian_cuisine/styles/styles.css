@@ -187,6 +187,7 @@ main {
     justify-content: center;
     min-height: 400px;
     overflow: hidden;
+    background-color: var(--dark-blue);
 }
 
 .hero-img {
