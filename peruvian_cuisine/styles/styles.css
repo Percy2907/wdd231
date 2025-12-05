@@ -391,6 +391,7 @@ main {
     justify-content: center;
     min-height: 300px;
     overflow: hidden;
+    background-color: var(--dark-blue);
 }
 
 .hero-recipes-img {
