@@ -34,7 +34,7 @@ function updateLastModified() {
 function initVideoLink() {
     const videoLink = document.getElementById('videoLink');
     //Video URL
-    const videoURL = "https://www.youtube.com/"; 
+    const videoURL = "https://youtu.be/HGuHa_9ArM4"; 
     
     if (videoLink) {
         videoLink.href = videoURL;
